@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+
+  /* ### Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+
+  /* ## Typography */
+
+  --size: 16px;
+
+  /* ### Font */
+  /* - Weights: 500, 800 */
+  /* [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) */
+
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+  background: var(--very-light-grayish-blue);
+  font-family: var(--font-jakarta);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  max-width: 730px;
+  height: auto;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem 2rem;
+  background: var(--white);
+  -webkit-animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-container div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-container button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-jakarta);
+  font-size: var(--size);
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  min-width: 32px;
+  min-height: 25px;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .header-container {
+    font-size: 14px;
+  }
+  .header-container button {
+    font-size: 14px;
+  }
+}
